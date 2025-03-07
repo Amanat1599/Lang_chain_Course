@@ -14,6 +14,10 @@ from langchain import HuggingFaceHub
 from streamlit_chat import message
 from langchain.callbacks import get_openai_callback
 from sentence_transformers import SentenceTransformer
+from transformers import AutoTokenizer, AutoModelForQuestionAnswering, pipeline
+import time
+import torch.quantization
+
 
 openapi_key = st.secrets["OPENAI_API_KEY"]
 
